@@ -1,0 +1,23 @@
+---
+- hosts: all
+  gather_facts: yes
+  serial: 1
+  connection: local
+
+  tasks:
+
+  - command: uname -a
+  - command: ls -l
+  - command: pwd
+
+  - debug: var=ansible_user
+  - debug: var=ansible_ssh_user
+  - debug: var=ansible_ssh_pass
+  - debug: var=ansible_become_pass
+
+  - debug: var=hostvars
+  - debug: var=groups
+  - debug: var=ansible_facts
+  - debug: var=ansible_local
+
+  - setup: 
