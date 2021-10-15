@@ -1,1 +1,1 @@
-export ANSIBLE_STDOUT_CALLBACK=gm_log
+export ANSIBLE_STDOUT_CALLBACK=default
